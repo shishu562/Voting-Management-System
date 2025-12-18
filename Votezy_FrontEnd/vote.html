@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cast Vote - Votezy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🗳️ Votezy</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="candidate.html">Candidates</a>
+      <a href="voter.html">Voters</a>
+      <a href="vote.html" class="active">Cast Vote</a>
+      <a href="result.html">Results</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h2>🗳️ Cast Your Vote</h2>
+      <p class="subtitle">Select a registered voter and candidate to cast a vote securely.</p>
+    </section>
+
+    <section id="voteMessage"></section>
+
+    <section class="card form-card">
+      <h3>Voting Panel</h3>
+      <form id="voteForm" autocomplete="off">
+        <div class="form-grid">
+          <div>
+            <label for="voterSelect">Select Voter</label>
+            <select id="voterSelect" required></select>
+          </div>
+          <div>
+            <label for="candidateSelect">Select Candidate</label>
+            <select id="candidateSelect" required></select>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" id="castBtn" class="btn primary">Cast Vote</button>
+          <button type="button" id="voteRefresh" class="btn secondary">Refresh Lists</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h3>Recent Votes</h3>
+      <div class="table-container">
+        <table id="votesTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Voter ID</th>
+              <th>Candidate ID</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Votezy — Secure Digital Election Platform</footer>
+
+  <script src="JavaScript/api.js"></script>
+  <script src="JavaScript/vote.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manage Candidates - Votezy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🗳️ Votezy</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="candidate.html" class="active">Candidates</a>
+      <a href="voter.html">Voters</a>
+      <a href="vote.html">Cast Vote</a>
+      <a href="result.html">Results</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h2>👤 Manage Candidates</h2>
+      <p class="subtitle">Add, view, and manage all registered candidates in your election system.</p>
+    </section>
+
+    <section id="message"></section>
+
+    <section class="card form-card">
+      <h3>Add New Candidate</h3>
+      <form id="candidateForm" autocomplete="off">
+        <div class="form-grid">
+          <div>
+            <label for="candidateName">Name</label>
+            <input id="candidateName" placeholder="Enter candidate name" required />
+          </div>
+          <div>
+            <label for="candidateParty">Party</label>
+            <input id="candidateParty" placeholder="Enter party name" required />
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" id="addBtn" class="btn primary">Add Candidate</button>
+          <button type="button" id="refreshBtn" class="btn secondary">Refresh</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h3>Candidate List</h3>
+      <div class="table-container">
+        <table id="candidatesTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Party</th>
+              <th>Votes</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Votezy — Secure Digital Election Platform</footer>
+
+  <script src="JavaScript/api.js"></script>
+  <script src="JavaScript/candidate.js"></script>
+</body>
+</html>

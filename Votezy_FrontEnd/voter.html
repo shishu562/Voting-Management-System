@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manage Voters - Votezy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🗳️ Votezy</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="candidate.html">Candidates</a>
+      <a href="voter.html" class="active">Voters</a>
+      <a href="vote.html">Cast Vote</a>
+      <a href="result.html">Results</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h2>🧾 Voter Registration</h2>
+      <p class="subtitle">Register new voters and manage their eligibility details for the election.</p>
+    </section>
+
+    <section id="voterMessage"></section>
+
+    <section class="card form-card">
+      <h3>Register New Voter</h3>
+      <form id="voterForm" autocomplete="off">
+        <div class="form-grid">
+          <div>
+            <label for="voterName">Full Name</label>
+            <input id="voterName" placeholder="Enter voter's full name" required />
+          </div>
+          <div>
+            <label for="voterEmail">Email</label>
+            <input id="voterEmail" type="email" placeholder="Enter voter's email" required />
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" id="registerBtn" class="btn primary">Register</button>
+          <button type="button" id="voterRefresh" class="btn secondary">Refresh</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h3>Registered Voters</h3>
+      <div class="table-container">
+        <table id="votersTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Has Voted</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Votezy — Secure Digital Election Platform</footer>
+
+  <script src="JavaScript/api.js"></script>
+  <script src="JavaScript/voter.js"></script>
+</body>
+</html>

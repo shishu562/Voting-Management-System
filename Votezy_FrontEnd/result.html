@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Election Results - Votezy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🗳️ Votezy</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="candidate.html">Candidates</a>
+      <a href="voter.html">Voters</a>
+      <a href="vote.html">Cast Vote</a>
+      <a href="result.html" class="active">Results</a>
+    </nav>
+  </header>
+
+  <main class="container fade-in">
+    <section class="card">
+      <h2 class="section-title">📊 Declare & View Results</h2>
+      <p class="section-subtitle">Manage election results and view declared outcomes.</p>
+
+      <section id="resultMessage" class="message-box"></section>
+
+      <form id="resultForm" class="styled-form">
+        <label for="electionName">Election Name</label>
+        <input 
+          id="electionName" 
+          placeholder="e.g., Delhi Election 2025" 
+          required 
+        />
+        <div class="button-group">
+          <button type="button" id="declareBtn" class="primary-btn">Declare Result</button>
+          <button type="button" id="resultRefresh" class="secondary-btn">Refresh</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card mt-4">
+      <h3 class="section-title">🗳️ Declared Results</h3>
+      <div class="table-container">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Election Name</th>
+              <th>Total Votes</th>
+              <th>Winner ID</th>
+         
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Votezy | Built with ❤️ for Transparent Voting</footer>
+
+  <script src="JavaScript/api.js"></script>
+  <script src="JavaScript/result.js"></script>
+</body>
+</html>
